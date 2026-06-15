@@ -790,9 +790,10 @@ h3 {
     padding: 20px;
   }
 
-  .photo-placeholder {
-    height: 210px;
-  }
+.photo-placeholder,
+.real-photo {
+  height: 210px;
+}
 
   .letter-card,
   .final-card {
