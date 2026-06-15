@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#120716" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="2 años" />
+  <meta name="description" content="Regalo digital de aniversario de 2 años." />
+
+  <title>Nuestros 2 años</title>
+
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/icon-192.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="noise"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <main class="app">
+    <section class="hero" id="inicio">
+      <div class="orb orb-one"></div>
+      <div class="orb orb-two"></div>
+
+      <nav class="topbar">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <span>Anniversary.exe</span>
+        </div>
+        <a href="#carta" class="nav-link">Abrir regalo</a>
+      </nav>
+
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Regalo especial · 2 años juntos</p>
+          <h1>
+            Dos años,
+            <span class="gradient-text">mil recuerdos</span>
+            y una historia que sigue cargando…
+          </h1>
+          <p class="subtitle">
+            Esta página está hecha para ti. Un pequeño rincón digital para recordar
+            lo que somos, lo que hemos vivido y todo lo que todavía nos queda.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#timeline" class="button primary">Ver nuestra historia</a>
+            <button class="button ghost" id="openModal">Mensaje secreto</button>
+          </div>
+        </div>
+
+        <div class="phone-card reveal">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="status-row">
+              <span>2 años</span>
+              <span>♥</span>
+            </div>
+
+            <div class="glass-card mini">
+              <p class="small-label">Sistema</p>
+              <h2 id="typingText">Cargando recuerdos...</h2>
+              <div class="progress">
+                <span></span>
+              </div>
+            </div>
+
+            <div class="memory-stack">
+              <div class="memory-item floating">
+                <strong>730+</strong>
+                <span>días eligiéndonos</span>
+              </div>
+              <div class="memory-item floating delay-1">
+                <strong>∞</strong>
+                <span>planes pendientes</span>
+              </div>
+              <div class="memory-item floating delay-2">
+                <strong>1</strong>
+                <span>persona favorita</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-indicator" href="#contador" aria-label="Bajar">
+        <span></span>
+      </a>
+    </section>
+
+    <section class="section counter-section reveal" id="contador">
+      <div class="section-heading">
+        <p class="eyebrow">Nuestro contador</p>
+        <h2>Tiempo desde que empezó todo</h2>
+        <p>
+          Cambia la fecha en <code>script.js</code> para que el contador sea exacto.
+        </p>
+      </div>
+
+      <div class="counter-grid">
+        <div class="counter-card">
+          <span id="days">000</span>
+          <p>días</p>
+        </div>
+        <div class="counter-card">
+          <span id="hours">00</span>
+          <p>horas</p>
+        </div>
+        <div class="counter-card">
+          <span id="minutes">00</span>
+          <p>minutos</p>
+        </div>
+        <div class="counter-card">
+          <span id="seconds">00</span>
+          <p>segundos</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="timeline">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Modo historia</p>
+        <h2>Nuestra línea temporal</h2>
+        <p>
+          Sustituye estos momentos por los vuestros: primera cita, primer viaje,
+          una tontería vuestra, una foto especial, una frase interna…
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="date">Capítulo 01</span>
+            <h3>Cuando empezó todo</h3>
+            <p>
+              Aquí puedes escribir cómo os conocisteis, la primera conversación o
+              ese momento en el que todo empezó a ser distinto.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="date">Capítulo 02</span>
+            <h3>Nuestro primer plan</h3>
+            <p>
+              Añade una anécdota bonita, graciosa o muy vuestra. Cuanto más personal,
+              más especial queda.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="date">Capítulo 03</span>
+            <h3>Lo que más me gusta de ti</h3>
+            <p>
+              Este bloque queda genial para escribir tres o cuatro cosas que te
+              enamoran de esa persona.
+            </p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <span class="date">Capítulo 04</span>
+            <h3>Dos años después</h3>
+            <p>
+              Aquí puedes cerrar con una reflexión: lo que habéis construido y lo
+              que esperas vivir a partir de ahora.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section gallery-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Galería</p>
+        <h2>Recuerdos favoritos</h2>
+        <p>
+          Puedes cambiar estos bloques por fotos reales. Solo tienes que meter tus
+          imágenes en <code>assets/fotos</code> y cambiar el contenido.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <div class="photo-card">
+          <div class="photo-placeholder">Foto 1</div>
+          <h3>Ese día perfecto</h3>
+          <p>Describe aquí el recuerdo.</p>
+        </div>
+        <div class="photo-card">
+          <div class="photo-placeholder">Foto 2</div>
+          <h3>Nuestra risa favorita</h3>
+          <p>Describe aquí el recuerdo.</p>
+        </div>
+        <div class="photo-card">
+          <div class="photo-placeholder">Foto 3</div>
+          <h3>Un plan inolvidable</h3>
+          <p>Describe aquí el recuerdo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section letter-section reveal" id="carta">
+      <div class="letter-card">
+        <p class="eyebrow">Carta digital</p>
+        <h2>Para ti, mi persona favorita</h2>
+        <p>
+          Hoy cumplimos dos años, y aunque podría darte un regalo normal, quería
+          hacer algo un poco más nuestro: algo que se abra, que se descubra y que
+          guarde un pedacito de todo lo que siento.
+        </p>
+        <p>
+          Gracias por cada momento, por cada risa, por cada plan improvisado, por
+          cada conversación y por seguir siendo esa persona que convierte los días
+          normales en recuerdos importantes.
+        </p>
+        <p>
+          Ojalá esta página sea solo una pequeña captura de pantalla de todo lo que
+          hemos vivido, porque la versión completa todavía se está escribiendo.
+        </p>
+
+        <button class="button primary pulse" id="confettiButton">Celebrar nuestros 2 años</button>
+      </div>
+    </section>
+
+    <section class="section final-section reveal">
+      <div class="final-card">
+        <p class="eyebrow">Final desbloqueado</p>
+        <h2>Feliz aniversario, amor.</h2>
+        <p>
+          Dos años contigo. Y aun así, mi parte favorita sigue siendo pensar en todo
+          lo que viene ahora.
+        </p>
+        <div class="heart-loader">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="secret-modal" id="secretModal">
+    <div class="modal-card">
+      <button class="close-modal" id="closeModal" aria-label="Cerrar">×</button>
+      <p class="eyebrow">Mensaje secreto</p>
+      <h2>Contraseña aceptada: amor</h2>
+      <p>
+        Este es un mensaje oculto. Puedes cambiarlo por una frase interna,
+        una promesa, una broma vuestra o una sorpresa final.
+      </p>
+      <p class="secret-code">SYSTEM LOVE STATUS: 100%</p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
